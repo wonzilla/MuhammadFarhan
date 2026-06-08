@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.main-container{
+    width: 45%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #eeeeee;
+    border: 1px solid black;
+}
+
+.weather-header{
+    position: relative;
+    width: 230px;
+    border-radius: 3px;
+
+    padding: 0px 10px ;
+    background-color: black;
+}
+.weather-header input{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding-left: 30px;
+}
+.weather-header input::placeholder{
+    color: white;   
+}
+
+.weather-header i{
+    top: 10px;
+    left: 10px;
+    color: white;
+    position: absolute;
+}
+
+
+
+.weather-body{
+    display: flex;
+    margin: 20px 0px;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.weather-forecast{
+    margin: 10px 0px;
+    padding: 5px 20px;
+    font-size: 18px;
+background-color: black;
+color: white;
+border-radius: 10px;
+}
+.weather-icon i{
+    font-size: 30px;
+    color: black;
+
+}
+.weather-icon img{
+    width: 100px;
+    
+
+}
+.weather-data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.weather-temprature {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+.weathercards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+padding: 20px;
+width: 100%;
+gap: 10px;
+
+}
+
+.weather-minmax{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.card{
+    background-color: rgb(245, 243, 243);
+    width: 45%;
+    align-items: center;
+padding: 10px;
+
+    display: flex;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);   
+    gap: 10px;
+    
+}
+.card i{
+    font-size: 30px;
+    
+}
+.card-info p{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

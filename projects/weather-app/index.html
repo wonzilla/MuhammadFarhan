@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main-container">
+        <!-- first part -->
+       <div class="weather-header">
+        <form class="weather-search">
+        <i class="fa-solid fa-magnifying-glass"></i>  <input type="text" placeholder="Search your city" name="search" id="search">
+    </form>
+       </div>
+       <!-- second part -->
+        <div class="weather-body">
+          <h1 class="city">Chiniot , Pakistan</h1>
+          <p class="date-time">Friday , 24th March 2023</p>
+          <div class="weather-data">
+            <p class="weather-forecast">Cloud</p>
+            <div class="weather-icon"> <i class="fa-solid fa-cloud"></i></div>
+            <p class="weather-temprature">278&#176</p>
+            <div class="weather-minmax">
+                <p class="min">MIn 278&#176</p>
+                <p class="max">Max 282&#176</p>
+            </div>
+          </div>
+            
+              
+          
+          
+
+        </div>
+
+        <!-- third part -->
+         <div class="weathercards">
+            <div class="card">
+                <i class="fa-solid fa-cloud-sun"></i>
+                <div class="card-info">
+                    <p>Feels Like</p>
+                    <p id="feelslike">15&#176</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-cloud-sun"></i>
+                <div class="card-info">
+                    <p>Humidity</p>
+                    <p id="humidity">15&#176</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-cloud-sun"></i>
+                <div class="card-info">
+                    <p>Pressure</p>
+                    <p id="pressure">15&#176</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-cloud-sun"></i>
+                <div class="card-info">
+                    <p>Wind</p>
+                    <p id="wind">15&#176</p>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
