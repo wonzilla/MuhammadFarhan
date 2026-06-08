@@ -1,88 +1,3 @@
-// import { useEffect,useState } from "react";
-// import { Link } from "react-router-dom";
-// const Header = () => {
-//   const [active, setActive] = useState('Home');
-//   const [menuOpen, setMenuOpen] = useState(false);
-
-//   const toggleMenu = () => {
-//     setMenuOpen(!menuOpen);
-//   };
-
-//   useEffect(() => {
-//     const handleResize = () => {
-//       if (window.innerWidth > 768) {
-//         setMenuOpen(false);
-//       }
-//     };
-
-//     window.addEventListener('resize', handleResize);
-//     return () => window.removeEventListener('resize', handleResize);
-//   }, []);
-
-//   return (
-//     <header className="header">
-//       <Link to="/" className="logo" onClick={() => setActive('Home')}>Farhan</Link>
-//       <i className='bx bx-menu' id="menu-icon" onClick={toggleMenu}></i>
-//       <nav className={`nav ${menuOpen ? 'active' : ''}`}>
-//         <Link 
-//           to="/" 
-//           className={active === 'Home' ? 'active' : ''} 
-//           onClick={() => {
-//             setActive('Home');
-//             setMenuOpen(false);
-//           }}
-//         >
-//           Home
-//         </Link>
-//         <Link 
-//           to="/projects" 
-//           className={active === 'Services' ? 'active' : ''} 
-//           onClick={() => {
-//             setActive('Services');
-//             setMenuOpen(false);
-//           }}
-//         >
-//           Projects
-//         </Link>
-//         <Link 
-//           to="/skills" 
-//           className={active === 'Resume' ? 'active' : ''} 
-//           onClick={() => {
-//             setActive('Resume');
-//             setMenuOpen(false);
-//           }}
-//         >
-//           Skills
-//         </Link>
-//         <Link 
-//           to="/about" 
-//           className={active === 'Portfolio' ? 'active' : ''} 
-//           onClick={() => {
-//             setActive('Portfolio');
-//             setMenuOpen(false);
-//           }}
-//         >
-//           About
-//         </Link>
-//         <Link 
-//           to="/contact" 
-//           className={active === 'Contact' ? 'active' : ''} 
-//           onClick={() => {
-//             setActive('Contact');
-//             setMenuOpen(false);
-//           }}
-//         >
-//           Contact
-//         </Link>
-//       </nav>
-//     </header>
-//   );
-// };
-
-
-// export default Header;
-
-
 
 
 
@@ -190,7 +105,6 @@ const Header = () => {
         margin: '0 auto',
         px: 2
       }}>
-        {/* Logo with animation */}
     <motion.div
   initial={{ opacity: 0, x: -20 }}
   animate={{ opacity: 1, x: 0 }}
@@ -213,25 +127,8 @@ const Header = () => {
       gap: 1, // spacing between image and text
     }}
   >
-    {/* 🖼️ Image before text */}
-    <Box
-      component="img"
-     loading="lazy"
-      src={MyLogo} // replace with your logo path
-      alt="Logo"
-      sx={{
-        width: {
-          xs:32,
-          sm:32,
-          md:52,
-          lg:62
-        },
-      
-       
-        padding:"0px",
-      }}
-    />
-    Team 86
+ 
+   Farhan
   </Typography>
 </motion.div>
 
@@ -321,6 +218,7 @@ const Header = () => {
                 sx={{
                   py: 2,
                   px: 3,
+                  color:"white",
                   '&:hover': {
                     backgroundColor: 'rgba(255, 255, 255, 0.1)'
                   },

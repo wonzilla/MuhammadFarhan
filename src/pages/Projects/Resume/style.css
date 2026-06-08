@@ -1,0 +1,238 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.griddiv{
+    display: grid;
+    /* grid-template-rows:  60px 80vh 8hvh 100px ; */
+    grid-template-rows: repeat(1, auto 100vh auto 100px)  ;
+    gap: 10px;
+}
+
+
+ .griddiv :first-child{
+    background-color: white;
+ }
+ .mainheader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+ }
+ .mainheader .logopart{
+    display: flex;
+    align-items: center;
+    margin-left:80px;
+width: 20%;
+    padding: 10px;
+ }
+ .mainheader .logopart img{
+    width: 30px;
+    
+ }
+ .logoheadind{
+    margin-left: 10px ;
+ }
+ .mainheader .navpart{
+  width: 70%;
+
+ }
+ .mainheader .navpart ul {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: start;
+ 
+}
+.mainheader .navpart ul li{
+    list-style: none;
+    background-color: rgb(100, 88, 17);
+    border-radius: 5px;
+margin: 0px 10px;
+padding: 5px 15px;
+
+}
+.mainheader .navpart ul li a{
+    background-color: transparent;
+    text-decoration: none;
+    color: white    ;
+    font-weight: bold;
+}
+
+.bodypart{
+    background-image: url(images/bodypart.jpg);
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: start ;
+    background-size: 100% 100%;
+}
+
+.bodypart  .mainbox{
+
+    width: 40vw;
+    height: auto;
+    background-color: rgba(248, 238, 238, 0.5);
+    
+
+    padding: 20px 30px;
+    margin-left: 100px;
+
+}
+.bodypart .mainbox p{
+    padding: 10px 5px;
+    font-size: 30px;
+    background-color: transparent;
+
+}
+.bodypart .mainbox h1{
+    font-size: 70px;
+    font-weight: bold;
+}
+.bodypart .mainbox button{
+    padding: 10px 25px;
+    background-color: rgb(100, 88, 17);
+cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.videosection{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90vw;
+
+}
+.videosection .headingrow{
+    background-color: transparent;
+    padding: 10px 20px;
+}
+.videosection .headingrow h1{
+    background-color: transparent;
+}
+
+.videosection .videorow{
+    padding: 10px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    row-gap: 20px;
+    column-gap: 20px;
+
+}
+.videosection .videorow .videobox{
+    height: 400px;
+    display: flex;
+   
+
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.videosection .videorow .videobox .video{
+    width: 100%;
+}
+.videosection .videorow .videobox .video img{
+    height: 300px;
+    width: 100%;
+}
+.videosection .videorow .videobox a {
+    width: 60%;
+
+
+}
+.videosection .videorow .videobox  button{
+    cursor: pointer;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 25px;
+    background-color: red;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer h1 {
+    background-color: transparent !important;
+}
+
+@media screen and (max-width : 1000px) {
+    .videorow {
+        grid-template-columns: repeat(2,auto) !important;
+    }
+}
+
+
+@media screen and (max-width : 770px) {
+    .mainheader      {
+        flex-direction: column;
+    }
+    .mainheader .logopart{
+        align-self: flex-start;
+        margin-left: 5%;
+    }
+    .mainheader .logopart img{
+        width: 40px;
+    }
+    .mainheader .navpart{
+        width: 100%;
+    }
+    .mainheader .navpart ul{
+        justify-content: center;
+    }
+    .mainheader .navpart ul li{
+        padding: 1vw 1vh;
+        width: auto;
+        font-size: 2vw;
+    }
+  
+    
+}
+@media screen and (max-width : 770px) {
+    .headingrow h1{
+        font-size: 20px;
+}
+    .videorow{
+        grid-template-columns: repeat(1, auto) !important;
+
+    }
+}
+@media screen and (max-width : 900px) {
+    .bodypart .mainbox h1{
+        font-size: 40px;
+    
+    }
+}
+
+@media screen and (max-width : 500px) {
+    .bodypart .mainbox h1{
+        font-size: 30px;
+    
+    }
+    .bodypart .mainbox{
+    margin-left: 50px;
+        
+    }
+}
+@media screen and (max-width : 350px) {
+    .bodypart .mainbox h1{
+        font-size: 20px;
+    
+    }
+}
+

@@ -112,8 +112,8 @@ const Footer = () => {
       Explore Skills
     </Typography>
     
-    { ["Html","Css","JavaScript","React","TypeScript","Node Js","Express Js","BootStrap","Tailwind","Mui"].map((skill)=>{
-    return <Link to={"/"} >
+    { ["Html","Css","JavaScript","React","Node Js","Express Js","BootStrap","Tailwind","Mui"].map((skill , index)=>{
+    return <Link to={"/"}  key={index}>
         <Box sx={{
           display: 'flex',
           alignItems: 'center',

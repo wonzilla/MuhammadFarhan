@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Alarm</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+        }
+        .container {
+            text-align: center;
+        }
+        .days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .day {
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .day:hover {
+            background-color: #ddd;
+        }
+        .day.selected {
+            background-color: #ffd700;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .home{
+    cursor: pointer;
+    width: 50%;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 25px;
+    background-color: red;
+}
+.home:hover{
+    background-color: rgb(243, 84, 84);
+
+}
+
+@media screen and (max-width : 900px) {
+    .days {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+        }
+}
+@media screen and (max-width : 900px) {
+    .days {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+        }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select a Day</h2>
+        <div class="days">
+            <div class="day" data-day="monday">Monday</div>
+            <div class="day" data-day="tuesday">Tuesday</div>
+            <div class="day" data-day="wednesday">Wednesday</div>
+            <div class="day" data-day="thursday">Thursday</div>
+            <div class="day" data-day="friday">Friday</div>
+            <div class="day" data-day="saturday">Saturday</div>
+            <div class="day" data-day="sunday">Sunday</div>
+        </div>
+        <p id="alarmMessage">No alarms are set</p>
+        <a href="../index.html" > <button class="home">Back to Home</button> </a>
+
+    </div>
+
+    <script>
+        const days = document.querySelectorAll('.day');
+        const alarmMessage = document.getElementById('alarmMessage');
+
+        days.forEach(day => {
+            day.addEventListener('click', () => {
+             
+                days.forEach(d => d.classList.remove('selected'));
+                
+               
+                day.classList.add('selected');
+
+             
+                const dayName = day.getAttribute('data-day');
+                let message = '';
+
+                switch (dayName) {
+                    case 'monday':
+                        message = 'Wake up at 9:00 AM';
+                        break;
+                    case 'tuesday':
+                    case 'wednesday':
+                        message = 'Wake up at 8:00 AM';
+                        break;
+                    case 'thursday':
+                        message = 'Wake up at 8:30 AM';
+                        break;
+                    case 'friday':
+                        message = 'Wake up at 9:30 AM';
+                        break;
+                    case 'saturday':
+                    case 'sunday':
+                        message = 'Wake up at 10:00 AM';
+                        break;
+                    default:
+                        message = 'No alarms are set';
+                }
+
+                alarmMessage.textContent = message;
+            });
+        });
+    </script>
+</body>
+</html>

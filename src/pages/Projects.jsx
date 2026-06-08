@@ -1,141 +1,153 @@
-import { Box, Typography, Grid,  Container } from '@mui/material';
+import { Box, Typography, Grid, Container, Stack, Divider } from '@mui/material';
 import CardItem from '../components/CardItem';
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { FiAward, FiCode, FiHeart } from 'react-icons/fi';
+import WeatherImage from "../assets/images/weather.png"
+import CalculatorImage from "../assets/images/calculator.png"
+import RestaurantImage from "../assets/images/restaurant.png"
+import TableImage from "../assets/images/table.png"
+import MarksImage from "../assets/images/marks.png"
+
 const Projects = () => {
-   const { pathname } = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    // Page ke top pe scroll kare on route change
     window.scrollTo(0, 0);
   }, [pathname]);
- const project = [
-  {
-    title: 'Currency Converter Pro',
-    description: 'Advanced currency conversion with real-time rates, historical charts, and portfolio tracking.',
-    image: 'https://images.unsplash.com/photo-1604594849809-dfedbc827105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-    tags: ['React', 'API', 'Chart.js', 'Redux'],
-    demoLink: '#',
-    codeLink: '#'
-  },
-  {
-    title: 'Weather Forecast App',
-    description: 'Beautiful weather application with 7-day forecasts, severe weather alerts, and interactive maps.',
-    image: 'https://images.unsplash.com/photo-1601134467661-3d775b999c8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-    tags: ['React', 'OpenWeather API', 'Geolocation'],
-    demoLink: '#',
-    codeLink: '#'
-  },
-  {
-    title: 'URL Shortener Service',
-    description: 'Enterprise-grade URL shortening with custom domains, analytics dashboard, and QR code generation.',
-    image: 'https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-    tags: ['Node.js', 'MongoDB', 'Express', 'JWT'],
-    demoLink: '#',
-    codeLink: '#'
-  },
-  {
-    title: 'E-Commerce Platform',
-    description: 'Full-featured online store with product catalog, shopping cart, and payment integration.',
-    image: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-    tags: ['React', 'Node.js', 'Stripe API', 'Firebase'],
-    demoLink: '#',
-    codeLink: '#'
-  },
-  {
-    title: 'Task Management System',
-    description: 'Collaborative task manager with drag-and-drop interface, team management, and real-time updates.',
-    image: 'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-    tags: ['React', 'Firebase', 'DnD', 'Material UI'],
-    demoLink: '#',
-    codeLink: '#'
-  },
-  {
-    title: 'AI Image Generator',
-    description: 'Generate stunning artwork using AI with style transfer and custom prompt engineering.',
-    image: 'https://images.unsplash.com/photo-1677442135136-760c813a743f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-    tags: ['React', 'Python', 'OpenAI', 'Flask'],
-    demoLink: '#',
-    codeLink: '#'
-  }
-];
-return (
+
+  const project = [
+    {
+      title: 'Weather Forecast App',
+      description: 'Beautiful weather application with 7-day forecasts, severe weather alerts, and interactive maps. Real-time data and location-based predictions.',
+      image: WeatherImage,
+      tags: ['React', 'OpenWeather API', 'Geolocation'],
+      demoLink: '/MuhammadFarhan/projects/weather-app/index.html',
+      codeLink: '#'
+    },
+    {
+      title: 'Simple Calculator',
+      description: 'Powerful scientific calculator with advanced mathematical functions, clean interface, and real-time calculations.',
+      image: CalculatorImage,
+      tags: ['HTML5', 'JavaScript', 'CSS3'],
+      demoLink: '/MuhammadFarhan/projects/calculator/index.html',
+      codeLink: '#'
+    },
+    {
+      title: 'Restaurant Service',
+      description: 'Interactive restaurant menu system with dynamic ordering, cart management, and seamless user experience.',
+      image: RestaurantImage,
+      tags: ['HTML5', 'CSS3', 'JavaScript'],
+      demoLink: '/MuhammadFarhan/projects/restaurant/index.html',
+      codeLink: '#'
+    },
+    {
+      title: 'Print Table',
+      description: 'Versatile multiplication table generator with customizable ranges and print-friendly output format.',
+      image: TableImage,
+      tags: ['HTML5', 'CSS3', 'JavaScript'],
+      demoLink: '/MuhammadFarhan/projects/print-table/index.html',
+      codeLink: '#'
+    },
+    {
+      title: 'Grade Calculator',
+      description: 'Smart grade calculator with weighted scoring system, GPA conversion, and detailed result analysis.',
+      image: MarksImage,
+      tags: ['HTML5', 'CSS3', 'JavaScript'],
+      demoLink: '/MuhammadFarhan/projects/calculate-marks/index.html',
+      codeLink: '#'
+    },
+  ];
+
+
+
+  return (
     <Box
       sx={{
-        py: 5,
-         backgroundColor:"#1f242d"
+        minHeight: '100vh',
+        background: 'linear-gradient(135deg, #1f242d 0%, #15181e 100%)',
+        py: { xs: 4, sm: 6, md: 8 }
       }}
     >
-      <Container
-        sx={{
-        }}
-      >
-       
-     
-  <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "backOut" }}
-          >
-        <Box sx={{ textAlign: 'center' }}>
-  <Typography 
-    variant="h1" 
-    sx={{
-      fontSize: { xs: '2rem', sm: '3rem', md: '4rem' },
-      fontWeight: 700,
-      mb: 2,
-      background: 'linear-gradient(90deg, #ff8a00, #e52e71)',
-      WebkitBackgroundClip: 'text',
-      WebkitTextFillColor: 'transparent',
-      display: 'inline-block'
-    }}
-  >
-    My Completed Projects
-  </Typography>
-</Box>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            gutterBottom
-            sx={{
-              fontWeight: 700,
-              opacity: 0.6,
-              color: "white",
-              marginBottom:"30px",
-              padding:"20px 0px",
-              mx: "auto",
-              maxWidth: "700px",
-            }}
-          >
-          I take pride in building a variety of high-quality projects that demonstrate my skills in web development, design, and problem-solving. Below are some of my best works, created with dedication, creativity, and modern technologies.
-          </Typography>
+      <Container maxWidth="xl">
+        {/* Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "backOut" }}
+        >
+          <Box sx={{ textAlign: 'center', mb: 6 }}>
+            <Typography
+              variant="overline"
+              sx={{
+                color: '#ff8a00',
+                fontWeight: 600,
+                letterSpacing: 2,
+                mb: 2,
+                display: 'block'
+              }}
+            >
+              MY PORTFOLIO
+            </Typography>
+            
+            <Typography
+              variant="h1"
+              sx={{
+                fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4.5rem' },
+                fontWeight: 800,
+                mb: 2,
+                background: 'linear-gradient(135deg, #ff8a00 0%, #e52e71 50%, #ff8a00 100%)',
+                backgroundSize: '200% auto',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                animation: 'gradient 3s linear infinite',
+                '@keyframes gradient': {
+                  '0%': { backgroundPosition: '0% 50%' },
+                  '50%': { backgroundPosition: '100% 50%' },
+                  '100%': { backgroundPosition: '0% 50%' }
+                }
+              }}
+            >
+              Simple Projects
+            </Typography>
 
-
+           
+          </Box>
         </motion.div>
 
+       
 
-        
+        {/* Projects Grid */}
+        <Grid container spacing={4}>
+          {project.map((project, index) => (
+            <CardItem project={project} index={index} key={index} />
+          ))}
+        </Grid>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+        >
+          <Box
+            sx={{
+              textAlign: 'center',
+              mt: 8,
+              pt: 4,
+              pb: 2,
+              borderTop: '1px solid rgba(255,138,0,0.1)'
+            }}
+          >
+            <Typography variant="body2" sx={{ color: '#b0b3b8' }}>
+              © 2024 All Projects are production-ready and continuously updated
+            </Typography>
+          </Box>
+        </motion.div>
       </Container>
-
-   
-
-
- <Box sx={{ p: 4 , backgroundColor:"#1f242d"}}>
-      <Grid container spacing={6}>
-        {project.map((project, index) => (
-        <CardItem project={project} index={index} key={index} />
-        ))}
-      </Grid>
-    </Box>
-
-
     </Box>
   );
-
-
-
-
 };
 
 export default Projects;

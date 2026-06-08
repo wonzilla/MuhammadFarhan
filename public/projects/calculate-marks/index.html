@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f6d365, #fda085);
+        }
+        .card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        input {
+            width: 80%;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            padding: 0.7rem 1.5rem;
+            background-color: #f85e34;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover {
+            background-color: #f6d365;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            color: #333;
+        }
+
+        a {
+    width: 60%;
+
+
+}
+  .home{
+    cursor: pointer;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 25px;
+    background-color: red;
+}
+.home:hover{
+    background-color: rgb(243, 84, 84);
+
+}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Enter your marks to calculate your grade</h2>
+        <input  id="marksInput" placeholder="Enter marks (0-100)" min="0" max="100">
+        <button id="submitButton">Submit</button>
+        <a href="../index.html" > <button class="home">Back to Home</button> </a>
+        <p id="gradeMessage"></p>
+    </div>
+
+    <script>
+        const marksInput = document.getElementById('marksInput');
+        const submitButton = document.getElementById('submitButton');
+        const gradeMessage = document.getElementById('gradeMessage');
+
+        function calculateGrade() {
+            const marks = parseInt(marksInput.value);
+
+            if (isNaN(marks) || marks < 0 || marks > 100) {
+                gradeMessage.textContent = 'Please enter a valid number between 0 and 100.';
+                return;
+            }
+
+            if (marks > 90) {
+                gradeMessage.textContent = 'Your grade is A and you are Pass.';
+            } else if (marks > 80) {
+                gradeMessage.textContent = 'Your grade is B and you are Pass.';
+            } else if (marks > 70) {
+                gradeMessage.textContent = 'Your grade is C and you are Pass.';
+            } else if (marks > 50) {
+                gradeMessage.textContent = 'Your grade is D and you are Pass.';
+            } else if (marks > 30) {
+                gradeMessage.textContent = 'Your grade is E and you are Pass.';
+            } else {
+                gradeMessage.textContent = 'Your grade is F and you are Fail.';
+            }
+        }
+
+        submitButton.addEventListener('click', calculateGrade);
+        marksInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                calculateGrade();
+            }
+        });
+    </script>
+</body>
+</html>

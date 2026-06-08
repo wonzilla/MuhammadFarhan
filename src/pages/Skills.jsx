@@ -99,7 +99,6 @@ const ProjectCard = styled(Paper)(({ theme }) => ({
 const technicalSkills = [
   { name: 'React', level: 95, icon: <Code />  , bcolor:"#EAA64D"},
   { name: 'JavaScript', level: 90, icon: <Code /> , bcolor:"#C78A3B"},
-  { name: 'TypeScript', level: 85, icon: <Code /> , bcolor:"#A16D28" },
   { name: 'Node.js', level: 88, icon: <Storage /> , bcolor:"#0D5EA6" },
   { name: 'Material-UI', level: 93, icon: <DesignServices />, bcolor:"#C78A3B" },
   { name: 'CSS/Sass', level: 90, icon: <DesignServices /> , bcolor:"#EAA64D"},
@@ -140,10 +139,11 @@ const projectExamples = [
 ];
 
 const learningPath = [
-  { skill: "Advanced React Patterns", progress: 65 },
-  { skill: "GraphQL", progress: 50 },
-  { skill: "AWS Certification", progress: 30 },
-  { skill: "Web3 Development", progress: 40 },
+  { skill: "Advanced React Patterns", progress: 85 },
+  { skill: "WebRTC", progress: 30 },
+  { skill: "Advanced Charts Implementing", progress: 90 },
+  { skill: "Next Js", progress: 70 },
+  { skill: "Linux Operating System", progress: 60 },
 ];
 
 const MySkills = () => {
@@ -542,7 +542,7 @@ sx={{
 
                 <Grid container spacing={3}>
                   {softSkills.map((skill, index) => (
-                    <Grid item xs={12} sm={6} md={4} key={index}>
+                    <Grid size={{xs:12,sm:6,md:4}} key={index}>
                       <motion.div
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.98 }}
@@ -581,55 +581,78 @@ sx={{
                 </Grid>
 
                 {/* Professional Experience */}
-                <Box sx={{ mt: 6 }}>
-                  <Typography variant="h4" component="h2" gutterBottom sx={{ fontWeight: 600, mb: 4 }}>
-                    <Work sx={{ verticalAlign: 'middle', mr: 1 }} />
-                    Professional Experience
-                  </Typography>
-                  
-                  <Accordion sx={{ mb: 2  ,   
-                  color:"white",
-                backgroundColor: "transparent",
-                boxShadow: '0 4px 10px rgba(255, 255, 255, 0.4)'
-                }}>
-                    <AccordionSummary expandIcon={<ExpandMore  sx={{ color: 'white' }} />}>
-                      <Typography sx={{ fontWeight: 600 }}>Team Collaboration</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Successfully led cross-functional teams of up to 8 developers and designers to deliver complex projects on time. Implemented agile methodologies that improved team productivity by 35%.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  
-                  <Accordion sx={{ mb: 2  ,  color:"white",
-                backgroundColor: "transparent",
-                boxShadow: '0 4px 10px rgba(255, 255, 255, 0.4)'}}>
-                    <AccordionSummary expandIcon={<ExpandMore />}>
-                      <Typography sx={{ fontWeight: 600 }}>Client Communication</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Acted as primary technical liaison for 15+ clients, translating complex technical concepts into understandable language. Maintained 100% client satisfaction rating over 3 years.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  
-                  <Accordion sx={{
-                     color:"white",
-                backgroundColor: "transparent",
-                boxShadow: '0 4px 10px rgba(255, 255, 255, 0.4)'
-                  }}>
-                    <AccordionSummary expandIcon={<ExpandMore />}>
-                      <Typography sx={{ fontWeight: 600 }}>Problem Solving</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Developed innovative solutions to technical challenges that reduced development time by 40% on average. Created reusable component libraries that accelerated future project starts.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                </Box>
+              <Box sx={{ mt: 6 }}>
+  <Typography variant="h4" component="h2" gutterBottom sx={{ fontWeight: 600, mb: 4 }}>
+    <Work sx={{ verticalAlign: 'middle', mr: 1 }} />
+    Project Experience
+  </Typography>
+
+  <Accordion
+    sx={{
+      mb: 2,
+      color: "white",
+      backgroundColor: "transparent",
+      boxShadow: '0 4px 10px rgba(255, 255, 255, 0.4)'
+    }}
+  >
+    <AccordionSummary expandIcon={<ExpandMore sx={{ color: 'white' }} />}>
+      <Typography sx={{ fontWeight: 600 }}>
+        Learning Management System (LMS)
+      </Typography>
+    </AccordionSummary>
+    <AccordionDetails>
+      <Typography>
+        Developed a complete LMS platform with role-based access control (RBAC),
+        teacher applications, interviewer workflows, student management,
+        live classrooms, course management, attendance tracking, and
+        administrative dashboards.
+      </Typography>
+    </AccordionDetails>
+  </Accordion>
+
+  <Accordion
+    sx={{
+      mb: 2,
+      color: "white",
+      backgroundColor: "transparent",
+      boxShadow: '0 4px 10px rgba(255, 255, 255, 0.4)'
+    }}
+  >
+    <AccordionSummary expandIcon={<ExpandMore sx={{ color: 'white' }} />}>
+      <Typography sx={{ fontWeight: 600 }}>
+        eCommerce Platform
+      </Typography>
+    </AccordionSummary>
+    <AccordionDetails>
+      <Typography>
+        Built a full-stack eCommerce application featuring product management,
+        shopping cart, authentication, order processing, admin dashboards,
+        and responsive user interfaces using modern web technologies.
+      </Typography>
+    </AccordionDetails>
+  </Accordion>
+
+  <Accordion
+    sx={{
+      color: "white",
+      backgroundColor: "transparent",
+      boxShadow: '0 4px 10px rgba(255, 255, 255, 0.4)'
+    }}
+  >
+    <AccordionSummary expandIcon={<ExpandMore sx={{ color: 'white' }} />}>
+      <Typography sx={{ fontWeight: 600 }}>
+        2+ Years of Self-Learning & Development
+      </Typography>
+    </AccordionSummary>
+    <AccordionDetails>
+      <Typography>
+        Continuously learning and building projects with the MERN stack,
+        authentication systems, REST APIs, real-time communication,
+        database design, cloud services, and modern frontend development.
+      </Typography>
+    </AccordionDetails>
+  </Accordion>
+</Box>
               </Box>
             )}
 
@@ -646,7 +669,7 @@ sx={{
 
                 <Grid container spacing={3}>
                   {projectExamples.map((project, index) => (
-                    <Grid item xs={12} key={index}>
+                    <Grid size={{xs:12}} key={index}>
                       <motion.div
                         whileHover={{ y: -5 }}
                         transition={{ type: 'spring', stiffness: 300 }}
@@ -707,28 +730,28 @@ sx={{
                   
                   <Grid container spacing={3}>
                     {[
-                      {
-                        title: "Discovery",
-                        description: "Thorough requirements gathering and user research to understand project goals",
-                        icon: <Lightbulb />
-                      },
-                      {
-                        title: "Planning",
-                        description: "Creating detailed technical specifications and project timelines",
-                        icon: <DesignServices />
-                      },
-                      {
-                        title: "Development",
-                        description: "Agile implementation with continuous testing and iteration",
-                        icon: <Code />
-                      },
-                      {
-                        title: "Delivery",
-                        description: "Rigorous QA and performance optimization before launch",
-                        icon: <RocketLaunch />
-                      }
-                    ].map((step, index) => (
-                      <Grid item xs={12} sm={6} md={3} key={index}>
+  {
+    title: "Requirement Analysis",
+    description: "Understanding project goals, features, user roles, and business requirements before starting development.",
+    icon: <Lightbulb />
+  },
+  {
+    title: "Project Planning",
+    description: "Planning system architecture, database structure, APIs, workflows, and implementation strategy.",
+    icon: <DesignServices />
+  },
+  {
+    title: "Clean Code Development",
+    description: "Building scalable and maintainable applications using clean code principles, reusable components, and best practices.",
+    icon: <Code />
+  },
+  {
+    title: "Testing & Deployment",
+    description: "Testing functionality, fixing issues, optimizing performance, and deploying the project for production use.",
+    icon: <RocketLaunch />
+  }
+].map((step, index) => (
+                      <Grid size={{xs:12,sm:6,md:3}} key={index}>
                         <motion.div
                           whileHover={{ y: -5 }}
                           transition={{ type: 'spring', stiffness: 300 }}

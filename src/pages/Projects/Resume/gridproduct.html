@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Box Product</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            padding: 20px;
+        }
+        .grid_container{
+            display: grid;
+            height: 100vh;
+            gap: 10px;
+            grid-template-columns: repeat(4,auto);
+            align-items: center ;
+            justify-content: space-evenly;
+        }
+        .grid_item{
+            border-radius: 10px;
+            height: 430px;
+            width: 250px;
+
+            border: 2px solid black;
+            background-color: aliceblue;
+        }
+
+
+        .contentsection{
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 10px ;
+            /* background-color: blue; */
+            height: 100%;
+        }
+        .card_image{
+            width: 100%;
+            height: 40%;
+        }
+        img{
+            width: 100%;
+            border-radius: 10px;
+
+            height: 100%;
+        }
+del{
+    font-weight: bold;
+}
+        .price{
+            padding: 5px 10px;
+            font-size: 25px;
+            font-family: "Nunito", serif;
+        }
+        .title{
+            padding: 5px 10px;
+            font-size: 20px;
+            font-family: "Nunito", serif;
+        }
+        .bought_rate{
+            padding: 0% 10px;
+            font-size: 15px;
+            font-family: "Nunito", serif;
+        }
+        .shipping_info{
+            padding: 0px 10px;
+            font-size: 25px;
+            font-family: "Nunito", serif;
+        }
+        .button_buy{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            margin-bottom: 20px;
+            border-radius: 8px;
+            padding: 8px 20px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Nunito", serif;
+            border: none;
+            color: white;
+            width: 100%  ;
+            background-color: orange;
+        }
+        .contentarea{
+            padding: 15px;
+        }
+
+        @media screen and (max-width:430px) {
+            .grid_container{
+                grid-template-columns: repeat(1,auto) !important;
+            }
+        
+        
+        }
+        @media screen and (max-width:630px) {
+            .grid_container{
+                grid-template-columns: repeat(2,auto) !important;
+            }
+        
+        
+        }
+        @media screen and (max-width:1024px) {
+            .grid_container{
+                grid-template-columns: repeat(3,auto);
+            }
+            .img{
+                width: 90%;
+            }
+            
+        }
+        @media screen and (min-width:1024px) {
+            
+        }
+     h1{
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-top: 20px;
+     }
+    </style>
+</head>
+<body>
+    <div class="grid_container">
+ 
+
+        <div class="grid_item item1">
+            <div class="contentsection">
+                <div class="card_image">
+<img src="https://5.imimg.com/data5/SELLER/Default/2023/9/341912546/LB/KE/NW/196891981/photo-1602143407151-7111542de6e8-500x500.jpg" alt="HeadPhone">  
+                </div>
+                <div class="contentarea">
+                    <div class="title">
+                        Lorem ipsum dolor sit amet.
+                   </div>
+                    <div class="bought_rate">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </div>
+                   
+                    <div class="price">
+                         <del>$300</del> $100
+                    </div>
+                    <div class="bought_rate">9 bought this</div>
+                    <div class="shipping_info">Standard Shiping</div>
+                    <div class="button_buy">
+                        <button>Buy</button>
+                    </div>
+                </div>
+            </div>
+                    </div>
+
+                    <div class="grid_item">
+                        <div class="contentsection">
+                            <div class="card_image">
+            <img src="https://media.istockphoto.com/id/1470498904/vector/blank-insulated-water-bottle-isolated-on-white-background-realistic-vector-mockup-stainless.jpg?s=612x612&w=0&k=20&c=diBqN8oYcUcFp4ZDK0FbVQlNOxFtHE0LovKuC_7DnS8=" alt="HeadPhone">  
+                            </div>
+                       <div class="contentarea">
+                        <div class="title">
+                            Lorem ipsum dolor sit amet.
+                       </div>
+                        <div class="bought_rate">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </div>
+                       
+                        <div class="price">
+                             <del>$300</del> $100
+                        </div>
+                      
+                        <div class="bought_rate">9 bought this</div>
+                        <div class="shipping_info">Standard Shiping</div>
+                        <div class="button_buy">
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                       </div>
+                                </div>
+
+                                <div class="grid_item">
+                                    <div class="contentsection">
+                                        <div class="card_image">
+                        <img src="https://i.pinimg.com/474x/de/18/72/de18721cd220523927df378d0ab59f6f.jpg" alt="HeadPhone">  
+                                        </div>
+                                        <div class="contentarea">
+                                            <div class="title">
+                                                Lorem ipsum dolor sit amet.
+                                           </div>
+                                            <div class="bought_rate">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </div>
+                                           
+                                            <div class="price">
+                                                 <del>$300</del> $100
+                                            </div>
+                                            <div class="bought_rate">9 bought this</div>
+                                            <div class="shipping_info">Standard Shiping</div>
+                                            <div class="button_buy">
+                                                <button>Buy</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                            </div>
+
+                                            <div class="grid_item">
+                                                <div class="contentsection">
+                                                    <div class="card_image">
+                                    <img src="https://i.pinimg.com/474x/bf/e5/0c/bfe50c1012d793fac568ad47147e6c1c.jpg" alt="HeadPhone">  
+                                                    </div>
+                                                   <div class="contentarea">
+                                                    <div class="title">
+                                                        Lorem ipsum dolor sit amet.
+                                                   </div>
+                                                    <div class="bought_rate">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </div>
+                                                   
+                                                    <div class="price">
+                                                         <del>$300</del> $100
+                                                    </div>  
+                                                    <div class="bought_rate">9 bought this</div>
+                                                    <div class="shipping_info">Standard Shiping</div>
+                                                    <div class="button_buy">
+                                                        <button>Buy</button>
+                                                    </div>
+                                                   </div>
+                                                </div>
+                                                        </div>
+    </div>
+</body>
+</html>

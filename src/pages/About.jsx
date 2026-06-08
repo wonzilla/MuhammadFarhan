@@ -1,80 +1,3 @@
-// // pages/About.js
-// import React from 'react';
-// import { Box, Typography, Avatar, Paper , Grid } from '@mui/material';
-// import { motion } from 'framer-motion';
-
-// const About = () => {
-//   return (
-//     <Box sx={{ p: 4 }}>
-//       <motion.div
-//         initial={{ opacity: 0, y: 20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.5 }}
-//       >
-//         <Typography variant="h3" gutterBottom align="center" sx={{ mb: 4 }}>
-//           About Me
-//         </Typography>
-//       </motion.div>
-
-//       <Grid container spacing={4} alignItems="center">
-//         <Grid item xs={12} md={4}>
-//           <motion.div
-//             initial={{ opacity: 0, x: -50 }}
-//             animate={{ opacity: 1, x: 0 }}
-//             transition={{ duration: 0.5, delay: 0.2 }}
-//           >
-//             <Box display="flex" justifyContent="center">
-//               <Avatar
-//                 alt="Profile Picture"
-//                 src="https://via.placeholder.com/300"
-//                 sx={{ width: 250, height: 250 }}
-//               />
-//             </Box>
-//           </motion.div>
-//         </Grid>
-//         <Grid item xs={12} md={8}>
-//           <motion.div
-//             initial={{ opacity: 0, x: 50 }}
-//             animate={{ opacity: 1, x: 0 }}
-//             transition={{ duration: 0.5, delay: 0.4 }}
-//           >
-//             <Paper elevation={3} sx={{ p: 3 }}>
-//               <Typography variant="h5" gutterBottom>
-//                 Full Stack Developer
-//               </Typography>
-//               <Typography paragraph>
-//                 I'm a passionate developer with expertise in web technologies including
-//                 HTML, CSS, JavaScript, React, Node.js, and databases like MySQL and MongoDB.
-//                 I also have experience with TypeScript and modern UI/UX design principles.
-//               </Typography>
-//               <Typography paragraph>
-//                 My problem-solving skills and ability to work in teams make me an effective
-//                 collaborator on projects. I enjoy creating efficient, scalable, and
-//                 user-friendly applications.
-//               </Typography>
-//               <Typography paragraph>
-//                 When I'm not coding, you can find me learning new technologies, contributing
-//                 to open source, or mentoring other developers.
-//               </Typography>
-//             </Paper>
-//           </motion.div>
-//         </Grid>
-//       </Grid>
-//     </Box>
-//   );
-// };
-
-// export default About;
-
-
-
-
-
-
-
-
-
-
 
 
 import React, { useState } from 'react';
@@ -136,37 +59,46 @@ const About = () => {
     { name: 'JavaScript', level: 85 },
     { name: 'Node.js', level: 80 },
     { name: 'MongoDB', level: 75 },
+    { name: 'MySql', level: 75 },
+    { name: 'Responsive Design', level: 85 },
+    { name: 'HTML', level: 85 },
+    { name: 'CSS', level: 70 },
+    { name: 'Problem Solving', level: 80 },
     { name: 'Material-UI', level: 85 },
-    { name: 'TypeScript', level: 70 }
   ];
 
-  const experience = [
-    {
-      role: 'Full Stack Developer',
-      company: 'Tech Solutions Inc.',
-      period: '2021 - Present',
-      description: 'Developed and maintained web applications using MERN stack'
-    },
-    {
-      role: 'Frontend Developer',
-      company: 'Digital Creations',
-      period: '2019 - 2021',
-      description: 'Built responsive UIs and implemented design systems'
-    }
-  ];
+const experience = [
+  {
+    role: 'Full Stack Developer (Self-Taught)',
+    company: 'Personal Projects',
+    period: '2023 - Present',
+    description: 'Building full-stack web applications using MERN stack, including LMS, eCommerce, and real-time communication systems.'
+  },
+  {
+    role: 'MERN Stack Developer',
+    company: 'Independent Learning & Development',
+    period: '2023 - Present',
+    description: 'Developed and deployed multiple projects while learning React, Node.js, Express, MongoDB, authentication, APIs, and cloud services.'
+  }
+];
 
-  const education = [
-    {
-      degree: 'BS Computer Science',
-      institution: 'University of Punjab',
-      year: '2015 - 2019'
-    },
-    {
-      degree: 'Web Development Certification',
-      institution: 'Online Platform',
-      year: '2018'
-    }
-  ];
+const education = [
+  {
+    degree: 'Matriculation',
+    institution: 'Board of Intermediate and Secondary Education',
+    year: 'Completed'
+  },
+  {
+    degree: 'Web Development Program',
+    institution: 'Baitussalam Institute, Karachi',
+    year: 'Completed'
+  },
+  {
+    degree: 'Self-Taught MERN Stack Development',
+    institution: 'Personal Learning & Projects',
+    year: '2023 - Present'
+  }
+];
 
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
@@ -276,43 +208,48 @@ const About = () => {
         </Grid>
 
         {/* Right Column - Content */}
-        <Grid item xs={12} md={8}>
+        <Grid size = {{xs:12}} >
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Paper 
-              elevation={3} 
-              sx={{ 
-                p: 3,
-                mb: 3,
-                borderRadius: '16px',
-                color:"white",
-                backgroundColor: "transparent",
-                boxShadow: '0 4px 10px rgba(255, 255, 255, 0.4)'
-              }}
-            >
-              <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
-                Full Stack Developer
-              </Typography>
-              <Typography paragraph>
-                I'm a passionate developer from Chiniot, Punjab with expertise in web technologies including
-                HTML, CSS, JavaScript, React, Node.js, and databases like MySQL and MongoDB.
-                I specialize in building responsive, accessible, and performant web applications.
-              </Typography>
-              <Typography paragraph>
-                With over 5 years of professional experience, I've worked on diverse projects ranging
-                from small business websites to large-scale enterprise applications. My problem-solving
-                skills and ability to work in teams make me an effective collaborator on projects.
-              </Typography>
-              <Typography paragraph>
-                When I'm not coding, you can find me learning new technologies, contributing
-                to open source, or mentoring other developers. I'm particularly interested in
-                the intersection of design and development, creating interfaces that are both
-                beautiful and functional.
-              </Typography>
-            </Paper>
+         <Paper
+  elevation={3}
+  sx={{
+    p: 3,
+    mb: 3,
+    borderRadius: '16px',
+    color: "white",
+    backgroundColor: "transparent",
+    boxShadow: '0 4px 10px rgba(255, 255, 255, 0.4)'
+  }}
+>
+  <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
+    Full Stack JavaScript Developer
+  </Typography>
+
+  <Typography paragraph>
+    I'm a passionate Full Stack JavaScript Developer from Chiniot, Punjab,
+    focused on building modern and responsive web applications. My primary
+    skills include JavaScript, React.js, Node.js, Express.js, MySQL, MongoDB,
+    HTML5, CSS3, and Material UI.
+  </Typography>
+
+  <Typography paragraph>
+    I enjoy creating clean user interfaces, developing REST APIs, managing
+    databases, and building complete web applications from frontend to backend.
+    I continuously improve my skills by working on personal projects and
+    exploring modern web development practices.
+  </Typography>
+
+  <Typography paragraph>
+    My focus is on writing maintainable code, solving real-world problems,
+    and creating fast, responsive, and user-friendly applications. I am
+    currently seeking opportunities where I can contribute, learn from
+    experienced developers, and grow as a professional software engineer.
+  </Typography>
+</Paper>
 
       <Tabs 
   value={activeTab} 
@@ -358,7 +295,7 @@ const About = () => {
                   >
                     <Grid container spacing={2}>
                       {skills.map((skill, index) => (
-                        <Grid item xs={12} sm={6} key={index}>
+                        <Grid size={{xs:12,sm:6}} key={index}>
                           <Box sx={{ mb: 2 }}>
                             <Typography variant="subtitle1" gutterBottom>
                               {skill.name}

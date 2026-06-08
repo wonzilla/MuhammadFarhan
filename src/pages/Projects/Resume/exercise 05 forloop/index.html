@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Checkpoints</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Loop Checkpoints</h2>
+        <button id="startLoop">Start Loop</button>
+        <div class="output" id="loopOutput"></div>
+    </div>
+
+    <script>
+        const startLoopButton = document.getElementById('startLoop');
+        const loopOutput = document.getElementById('loopOutput');
+
+        startLoopButton.addEventListener('click', () => {
+            let outputHTML = '';
+            for (let i = 1; i <= 100; i++) {
+                if (i % 10 === 0 && i !== 50 && i !== 100) {
+                    outputHTML += `<p>Checkpoint ${i}</p>`;
+                }
+                if (i === 50) {
+                    outputHTML += '<p>Checkpoint 50: Half</p>';
+                }
+                if (i === 100) {
+                    outputHTML += '<p>Checkpoint 100: Completed</p>';
+                }
+            }
+            loopOutput.innerHTML = outputHTML;
+        });
+    </script>
+</body>
+</html>

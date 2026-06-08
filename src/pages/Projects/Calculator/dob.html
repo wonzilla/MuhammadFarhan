@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator 🎂</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        #container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: auto;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #result {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        #countdown {
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h2>🎂 Age Calculator</h2>
+        <input type="date" id="dob">
+        <button onclick="calculateAge()">Calculate Age</button>
+        <div id="result"></div>
+        <div id="countdown"></div>
+    </div>
+
+    <script>
+        function calculateAge() {
+            let dob = document.getElementById("dob").value;
+            if (!dob) {
+                alert("Please enter your date of birth!");
+                return;
+            }
+
+            let birthDate = new Date(dob);
+            let today = new Date();
+            
+            let age = today.getFullYear() - birthDate.getFullYear();
+            let monthDiff = today.getMonth() - birthDate.getMonth();
+            let dayDiff = today.getDate() - birthDate.getDate();
+            
+            if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+                age--; // Agar birthday nahi aya to ek saal kam karna hai
+            }
+
+            document.getElementById("result").innerHTML = `Your Age: <b>${age} years</b>`;
+
+            // Calculate next birthday
+            let nextBirthday = new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate());
+            if (nextBirthday < today) {
+                nextBirthday.setFullYear(today.getFullYear() + 1);
+            }
+
+            let timeDiff = nextBirthday - today;
+            let daysLeft = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+            document.getElementById("countdown").innerHTML = `🎉 Next Birthday in: <b>${daysLeft} days</b>`;
+        }
+    </script>
+
+</body>
+</html>
